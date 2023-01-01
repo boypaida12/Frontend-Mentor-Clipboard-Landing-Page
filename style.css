@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+:root {
+    font-size: 18px;
+    --strong-cyan-color: hsl(171, 66%, 44%);
+    --light-blue-color: hsl(233, 100%, 69%);
+    --dark-grayish-blue-color: hsl(210, 10%, 33%);
+    --grayish-blue-color: hsl(201, 11%, 66%);
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+* > h2 {
+    color: var(--dark-grayish-blue-color);
+    margin-bottom: 1.5rem;
+}
+
+* > p {
+    color: var(--grayish-blue-color);
+    line-height: 1.7;
+}
+
+/********* header *******/
+
+header img {
+    margin: 7rem 0 3rem;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/bg-header-desktop.png');
+    background-repeat: no-repeat;
+    margin-bottom: 8rem;
+}
+
+header h2 {
+    font-size: 2.4rem;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+.w-50 {
+    width: 50%;
+    text-align: center;
+}
+
+.button-inner {
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    color: white;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+}
+
+.ios-download {
+    background-color: var(--strong-cyan-color);
+    box-shadow: 0px 4px 1px 0px rgba(39,145,130,1);
+    -webkit-box-shadow: 0px 4px 1px 0px rgba(39,145,130,1);
+    -moz-box-shadow: 0px 4px 1px 0px rgba(39,145,130,1);
+}
+
+.mac-download {
+    background-color: var(--light-blue-color);
+    box-shadow: 0px 4px 1px 0px rgba(74,92,207,1);
+    -webkit-box-shadow: 0px 4px 1px 0px rgba(74,92,207,1);
+    -moz-box-shadow: 0px 4px 1px 0px rgba(74,92,207,1);
+}
+
+/******* main *******/
+.text-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 4rem;
+}
+
+.image-text-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 6rem;
+}
+
+.txt-container {
+    margin: 4rem;
+    width: 50%;
+}
+
+.text-container-item {
+    line-height: 1.7;
+    margin-bottom: 3rem;
+}
+
+.text-container-item h2 {
+    font-size: 1.3rem;
+}
+
+.text-container-item p {
+    font-size: .9rem;
+}
+
+.img-container {
+    display: block;
+    margin: auto;
+    width: fit-content;
+}
+
+.image-text-container-ext {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 5rem 6rem;
+}
+
+.img-text {
+    text-align: center;
+}
+
+.img-text p {
+    width: 85%;
+    margin: auto;
+    font-size: 0.9rem;
+}
+
+.txt-mb {
+    margin-bottom: .45rem;
+}
+
+.brands-container {
+    margin-bottom: 6rem;
+}
+
+.brands {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6.2rem;
+    width: 82%;
+    margin: auto;
+}
+/******* footer  *********/
+
+footer {
+    background-color: rgb(222, 222, 222)
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 2rem 8rem 2rem;
+}
+
+.footer-item a {
+    text-decoration: none;
+}
+
+.footer-item p:hover {
+    color: var(--strong-cyan-color);
+}
+
+.socials {
+    width: fit-content;
+    margin: auto;
+}
+
+.socials img {
+    margin-right: 1rem;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 375px) {
+    .img-container img, .image-container img {
+        width: 300px;
+    }
+
+    .image-container {
+        width: fit-content;
+        margin: auto;
+    }
+
+    .brands, .footer-container, .image-text-container, .image-text-container-ext {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        background-image: url('images/bg-header-mobile.png');
+        text-align: center;
+    }
+
+    header h2 {
+        font-size: 2.2rem;
+    }
+
+    header p {
+        width: 90% !important;
+    }
+
+    .text-container p {
+        width: 80% !important;
+        text-align: center;
+    }
+
+    .text-container h2 {
+        text-align: center;
+    }
+
+    .txt-container {
+        text-align: center;
+        width: 75%;
+        margin: 3rem auto;
+    }
+
+    .img-text {
+        margin-bottom: 2rem;
+    }
+
+    .brands {
+        width: 50%;
+    }
+
+    .brands img {
+        width: fit-content;
+        margin: auto;
+    }
+
+    .buttons {
+       text-align: center;
+    }
+
+    .w-75 {
+        width: 75% !important;
+    }
+
+    .footer-container {
+        width: fit-content;
+        margin: auto;
+        text-align: center;
+        padding: 1rem 0;
+    }
+    .logo {
+        transform: translateX(2rem);
+    }
+
+   .footer-item p {
+        text-align: center;
+        margin-top: 1rem;
+   }
+
+    .socials {
+        display: flex;
+        margin-top: 1rem;
+        transform: translateX(0.5rem);
+    }
+}

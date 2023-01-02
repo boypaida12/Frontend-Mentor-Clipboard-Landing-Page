@@ -71,6 +71,10 @@ header p {
     -moz-box-shadow: 0px 4px 1px 0px rgba(39,145,130,1);
 }
 
+.ios-download:hover {
+    background-color: rgb(46, 169, 153);
+}
+
 .mac-download {
     background-color: var(--light-blue-color);
     box-shadow: 0px 4px 1px 0px rgba(74,92,207,1);
@@ -78,19 +82,31 @@ header p {
     -moz-box-shadow: 0px 4px 1px 0px rgba(74,92,207,1);
 }
 
+.mac-download:hover {
+    background-color: rgb(92, 110, 231);
+}
+
+
 /******* main *******/
+.bridge {
+    margin-bottom: 10rem !important;
+}
+
 .text-container {
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   margin-bottom: 4rem;
+   margin-bottom: 5rem;
 }
 
 .image-text-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 6rem;
+}
+
+.text-container h2, .txt-container h2 {
+    font-size: 2rem;
 }
 
 .txt-container {
@@ -120,7 +136,7 @@ header p {
 .image-text-container-ext {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin: 0 5rem 6rem;
+    margin: 0 5rem 10rem;
 }
 
 .img-text {
@@ -137,10 +153,6 @@ header p {
     margin-bottom: .45rem;
 }
 
-.brands-container {
-    margin-bottom: 6rem;
-}
-
 .brands {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -148,10 +160,12 @@ header p {
     width: 82%;
     margin: auto;
 }
+
+
 /******* footer  *********/
 
 footer {
-    background-color: rgb(222, 222, 222)
+    background-color: rgb(238, 238, 238)
 }
 
 .footer-container {
@@ -162,6 +176,11 @@ footer {
 
 .footer-item a {
     text-decoration: none;
+}
+
+.footer-item p {
+    line-height: 3;
+    color: var(--dark-grayish-blue-color);
 }
 
 .footer-item p:hover {
@@ -186,7 +205,7 @@ footer {
     color: hsl(228, 45%, 44%); 
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
     .img-container img, .image-container img {
         width: 300px;
     }
@@ -202,15 +221,16 @@ footer {
 
     header {
         background-image: url('images/bg-header-mobile.png');
+        background-size: cover;
         text-align: center;
     }
 
     header h2 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     header p {
-        width: 90% !important;
+        width: 100% !important;
     }
 
     .text-container p {
@@ -269,4 +289,54 @@ footer {
         margin-top: 1rem;
         transform: translateX(0.5rem);
     }
+}
+
+@media (max-width: 768px) and  (min-width: 426px) {
+
+    header h2 {
+        text-align: center;
+    }
+
+    .devices {
+        width: 500px;
+    }
+
+    .image-container {
+        width: fit-content;
+        margin: auto;
+    }
+
+    .txt-container {
+        text-align: center;
+        margin: 4rem auto;
+        
+    }
+
+    .image-text-container, .image-text-container-ext, .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .img-text {
+        margin-bottom: 3rem;
+    }
+
+    .brands {
+        grid-template-columns: 1fr;
+        width: fit-content;
+    }
+
+    .footer-container img {
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+    
+    .footer-item {
+        margin: auto;
+    }
+
+    .footer-item p {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
 }

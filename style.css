@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
 
 :root {
-    font-size: 18px;
     --strong-cyan-color: hsl(171, 66%, 44%);
     --light-blue-color: hsl(233, 100%, 69%);
     --dark-grayish-blue-color: hsl(210, 10%, 33%);
     --grayish-blue-color: hsl(201, 11%, 66%);
+    --text-color: white;
     font-family: 'Bai Jamjuree', sans-serif;
 }
 
@@ -14,14 +14,19 @@
     padding: 0;
     box-sizing: border-box;
 }
-* > h1 {
+
+* > h1, h2 {
     color: var(--dark-grayish-blue-color);
     margin-bottom: 1.5rem;
 }
 
 * > p {
     color: var(--grayish-blue-color);
-    line-height: 1.7;
+    line-height: 1.5;
+}
+
+body {
+    font-size: 18px;
 }
 
 /********* header *******/
@@ -36,16 +41,16 @@ header {
     justify-content: center;
     align-items: center;
     background-image: url('images/bg-header-desktop.png');
-    background-repeat: no-repeat;
+    background-repeat: space no-repeat;
     margin-bottom: 8rem;
 }
 
 header h1 {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
 }
 
 header p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 
 .w-50 {
@@ -59,7 +64,7 @@ header p {
     padding: 1rem 2rem;
     cursor: pointer;
     margin-right: 1rem;
-    color: white;
+    color: var(--text-color);
     font-size: 1.1rem;
     margin-top: 2rem;
 }
@@ -104,6 +109,7 @@ header p {
 .image-text-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 8rem;
 
 }
 
@@ -122,23 +128,24 @@ header p {
 }
 
 .text-container-item h2 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
 }
 
 .text-container-item p {
-    font-size: .9rem;
+    font-size: 1rem;
 }
 
 .img-container {
     display: block;
-    margin: auto;
+    margin: 5rem auto;
     width: fit-content;
 }
 
 .image-text-container-ext {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin: 0 5rem 10rem;
+    margin: 0 5rem 12rem;
 }
 
 .img-text {
@@ -146,13 +153,17 @@ header p {
 }
 
 .img-text p {
-    width: 85%;
+    width: 90%;
     margin: auto;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+}
+
+.img-text img {
+    margin-bottom: 2rem;
 }
 
 .txt-mb {
-    margin-bottom: .45rem;
+    margin-bottom: 2.6rem !important; 
 }
 
 .brands {
@@ -208,8 +219,14 @@ footer {
 }
 
 @media (max-width: 425px) {
+
+   body {
+    overflow-x: hidden;
+   }
+
+
     .img-container img, .image-container img {
-        width: 300px;
+        width: 300px !important;
     }
 
     .image-container {
@@ -218,7 +235,7 @@ footer {
     }
 
     .brands, .footer-container, .image-text-container, .image-text-container-ext {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
 
     header {
@@ -228,11 +245,11 @@ footer {
     }
 
     header h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     header p {
-        width: 100% !important;
+        width: 95% !important;
     }
 
     .text-container p {
@@ -242,6 +259,7 @@ footer {
 
     .text-container h2 {
         text-align: center;
+        width: 90%;
     }
 
     .txt-container {
@@ -252,6 +270,10 @@ footer {
 
     .img-text {
         margin-bottom: 2rem;
+    }
+
+    .img-text p {
+       width: 100% !important;
     }
 
     .brands {
@@ -265,6 +287,11 @@ footer {
 
     .buttons {
        text-align: center;
+    }
+
+    .button-inner {
+        width: 90%;
+        margin-left: 20px;
     }
 
     .w-75 {
@@ -344,5 +371,15 @@ footer {
     .socials img {
         margin-right: .45rem;
     }
+}
 
+@media (max-width: 1024px) {
+    .img-container img, .image-container img {
+        width: 500px;
+    }
+
+    .brands {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: auto;
+    }
 }
